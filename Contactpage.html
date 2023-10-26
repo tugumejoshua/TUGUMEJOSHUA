@@ -4,19 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contact page</title>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initialize"></script>
+
 </head>
 <body style="background-color: yellow;">
+    <a href="index.html">open Home page</a>
+    <a href="Gallerypage.html">open Gallery page</a>
+    <a href="Contactpage.html">open contact page</a>
+    <a href="Achievementspage.html">open Achievements page</a>
+
     <h1>You can contact me via these phone numbers</h1>
     <ul>
         <li>0786299576</li>
         <li>0704807010</li>
+    </ul>
+    <h2>Physical Address</h2>
+    <ul>
+        <li>Nalumunye</li>
     </ul>
     <h2>Email</h2>
     <ul>
         <li>tugumejoshua10@gmail.com</li>
     
     </ul>
-    <h2>Google <map name=""></map></h2>
+    <h2>Google Map</h2>
+    
+    <div id="map" style="width: 100%; height: 400px;"></div>
+    <script>
+        function initMap() {
+            var myLatLng = { lat: 37.7749, lng: -122.4194 }; // Replace with your desired coordinates
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: myLatLng,
+                zoom: 13 // Adjust the zoom level as needed
+            });
+            var marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'My Location'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
     
     
 </body>

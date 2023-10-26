@@ -34,4 +34,13 @@ body{
     color: maroon;
     text-align: center;
 }
+.media-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+video, audio {
+    max-width: 100%;
+}
 
